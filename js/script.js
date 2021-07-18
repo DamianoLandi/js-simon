@@ -21,3 +21,37 @@ console.log(message);
 
 alert(message);
 
+//Logica
+
+let clock = setTimeout(myFunction, 30000);
+
+function myFunction(){
+    let inputList = [];
+    for(let i = 0; i < numbList.length; i++){
+        const numbInput = parseInt(prompt("Inserisci un numero"));
+        inputList.push(numbInput);
+    }
+    console.table(inputList);
+
+    let counter = 0;
+
+    let resultMessage = "[ ";
+
+    for(let i = 0; i < numbList.length; i++){
+        if(numbList[i] === inputList[i]){
+            resultMessage += inputList[i] + " ";
+            counter += 1;
+        }
+    }
+
+    if(counter === 0){
+        resultMessage = "Oh no! Non ne hai indovinato neanche uno!"
+    }else if (counter === 1){
+        resultMessage += "] Complimenti! Hai indovinato " + counter + " numero!"
+    }else{
+        resultMessage += "] Complimenti! Hai indovinato " + counter + " numeri!"
+    }
+
+    alert(resultMessage);
+
+}
