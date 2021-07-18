@@ -9,3 +9,15 @@ for(let i = 0; i < 5; i++){
 
 console.log(numbList);
 
+//Generazione Alert
+
+let message = "";
+
+for(let i = 0; i < numbList.length; i++){
+    message += numbList[i] + " ";
+}
+
+console.log(message);
+
+alert(message);
+
